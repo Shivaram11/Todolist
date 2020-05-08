@@ -37,10 +37,16 @@ function addRemove(event){
   const item=event.target;
   console.log(item);
   if(item.classList[0]=="delete-btn"){
-    item.parentElement.remove();
+    // item.parentElement.remove();
+    const toDo=item.parentElement;
+    console.log(toDo);
+    toDo.classList.add("goback");
+    toDo.addEventListener("transitionend",function(){
+      toDo.remove();
+    });
 
   }
   if(item.classList[0]=="complete-btn"){
-    item.parentElement.classList.add("completed");
+    item.parentElement.classList.toggle("completed");
   }
 }

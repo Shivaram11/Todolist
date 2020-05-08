@@ -10,7 +10,7 @@ body{
 
 }
 form,header{
-  min-height: 20vh;
+  min-height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,8 +52,8 @@ min-width: 30%;
   display: flex;
   justify-content: space-between;
   align-items:center;
-
-}
+  transition: all 0.4s ease;
+  }
 .to-do li{
   flex:1;
 }
@@ -74,4 +74,10 @@ cursor: pointer;
 }
 .completed{
   text-decoration: line-through;
+  opacity: 0.5;
+}
+.goback{
+  transform: translateX(-20rem);
+  opacity:0;
+
 }
