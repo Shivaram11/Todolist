@@ -32,6 +32,7 @@ toDoList.addEventListener("click",addRemove);
 
   toDoList.appendChild(toDoDiv);
   toDoInput.value="";
+  document.querySelector("input").focus();
  }
 function addRemove(event){
   const item=event.target;
